@@ -52,18 +52,18 @@ void print_info(FILE *fp){
   fprintf(fp, "Options:\n");
   fprintf(fp, "   -p <filename>       plink prefix filename\n");
   fprintf(fp, "   -o <filename>       output filename\n");
-  fprintf(fp, "   -c <filename>       covariance matrix filename\n");
+  fprintf(fp, "   -c <filename>       covariate matrix filename\n");
   fprintf(fp, "   -s <filename>       phenotypes\n");
   fprintf(fp, "   -Q <filename>       admixproportions (for source pop1)\n");
   fprintf(fp, "   -f <filename>       allele frequencies\n");
-  fprintf(fp, "   -m <INTEGER>        model 0=add 1=rec\n");
+  fprintf(fp, "   -m <INTEGER>        model 0=add 1=rec (not implemented yet)\n");
   fprintf(fp, "   -b <filename>       file containing the start\n");
   fprintf(fp, "   -i <UINTEGER>       maximum iterations\n");
   fprintf(fp, "   -t <FLOAT>          tolerance for breaking EM\n");
   fprintf(fp, "   -r <FLOAT>          seed for rand\n");
   fprintf(fp, "   -f <INT>            full model 1:M1,2:M2,3:M3\n");
   fprintf(fp, "   -n <INT>            full model 1:M1,2:M2,3:M3,4:M4,5:M5\n");
-  fprintf(fp, "   -P <INT>            number of threads\n");
+  fprintf(fp, "   -P <INT>            number of threads (not implemented yet)\n");
   fprintf(fp, "\n");
 }
 
@@ -120,14 +120,14 @@ int main(int argc,char **argv){
   fprintf(fp, "   -a \'%s\'\t\tadmixproportions (for source pop1)\n",adname);
   fprintf(fp, "   -f \'%s\'\t\tallele frequencies\n",freqname);
   fprintf(fp, "\n optional arguments:\n");
-  fprintf(fp, "   -m \'%d\'\t\tmodel 0=add 1=rec\n",model);
+  fprintf(fp, "   -m \'%d\'\t\tmodel 0=add 1=rec (not implemented yet)\n",model);
   fprintf(fp, "   -b \'%s\'\t\tfile containing the start\n",startname);
   fprintf(fp, "   -i \'%d\'\t\tmax number of iterations\n",mIter);
   fprintf(fp, "   -0 \'%d\'\t\tfull 1:M1,2:M2,3:M3\n",full);
   fprintf(fp, "   -1 \'%d\'\t\tnull 1:M1,2:M2,3:M3, 4:M4 5:M5\n",full);
   fprintf(fp, "   -r \'%d\'\t\trandom seed\n",seed);
   fprintf(fp, "   -t \'%e\'\tfloat for breaking EM update\n",tol);
-  fprintf(fp, "   -P \'%d\'\t\tnumber of threads\n",nThreads);
+  fprintf(fp, "   -P \'%d\'\t\tnumber of threads  (not implemented yet) \n",nThreads);
   fprintf(fp, "\n");
   fprintf(stderr,"All files must be specified: -p -c -y -a -f -o\n");
 
